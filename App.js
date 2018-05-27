@@ -1,5 +1,5 @@
 /* exported App */
-/* globals DiceRoller */
+/* globals DiceRoller, GameBoard */
 
 'use strict';
 
@@ -16,6 +16,10 @@ class App {
         const diceRollerSection = dom.getElementById('dice-roller');
         const diceRollerComponent = new DiceRoller();
         diceRollerSection.appendChild(diceRollerComponent.render());
+        
+        const gameBoardSection = dom.getElementById('game-board');
+        const gameBoardComponent = new GameBoard();
+        gameBoardSection.appendChild(gameBoardComponent.render());
 
         return dom;
     }
