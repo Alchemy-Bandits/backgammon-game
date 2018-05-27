@@ -4,17 +4,26 @@
 const diceRollerTemplate = document.getElementById('dice-roller-template');
 
 class DiceRoller {
-    constructor() {
-
+    constructor(onClick) {
+        this.onClick = onClick;
+        
     }
 
     render() {
         const dom = diceRollerTemplate.content;
 
-        // const dieRollerSection = dom.getElementById('die-roller');
-        // const dieRollerComponent = new DieRoller();
-        // dieRollerSection.appendChild(dieRollerComponent.render());
+        const rollDiceButton = dom.getElementById('roll-dice-button');
+        rollDiceButton.addEventListener('click', () => {
+            const dieOne = rollDie();
+            const dieTwo = rollDie();
+            this.onClick(dieOne, dieTwo);
+        });
 
         return dom;
     }
+}
+
+
+function rollDie() {
+    return (1 + Math.floor(Math.random() * 6));
 }
