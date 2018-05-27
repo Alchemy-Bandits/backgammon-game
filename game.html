@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Backgammon</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <div id="root"></div>
@@ -21,12 +22,18 @@
     
     <template id="game-board-template">
         <h2>game board goes here</h2>
+        <div id="point-section"></div>
+    </template>
+    
+    <template id="point-template">
+        
+        <div class="point"><h3>point</h3></div>
     </template>
 
-    <script src="Point.js"></script>
-    <script src="GameBoard.js"></script>
-    <script src="DiceRoller.js"></script>
-    <script src="App.js"></script>
+    <script src="js/Point.js"></script>
+    <script src="js/GameBoard.js"></script>
+    <script src="js/DiceRoller.js"></script>
+    <script src="js/App.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

@@ -1,0 +1,11 @@
+#point-section{
+    display: flex;
+
+}
+
+.point {
+    width: 100px;
+    height: 600px;
+    background: red;
+    color: blue;
+}
