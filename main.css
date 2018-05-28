@@ -1,11 +1,22 @@
-#point-section{
-    display: flex;
+#game-board {
+    margin: auto;
+    width: 80%;
+}
 
+#point-section {
+    display: grid;
+    grid-template: 50% 50% / repeat(14, 1fr);
 }
 
 .point {
-    width: 100px;
-    height: 600px;
-    background: red;
-    color: blue;
+    height: 400px;
+    border: 2px solid black;
+}
+
+.bar {
+    border: 2px solid red;
+}
+
+.home {
+    border: 2px solid green;
 }
